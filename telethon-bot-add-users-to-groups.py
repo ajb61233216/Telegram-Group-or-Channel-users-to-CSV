@@ -137,7 +137,7 @@ def list_users_in_group():
     
     print('Fetching Members...')
     all_participants = []
-    all_participants = client.get_participants(target_group, aggressive=True)
+    all_participants = client.get_participants(target_group, aggressive=False)
     
     print('Saving In file...')
     with open("members-" + re.sub("-+","-",re.sub("[^a-zA-Z]","-",str.lower(target_group.title))) + ".csv","w",encoding='UTF-8') as f:
